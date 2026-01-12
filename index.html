@@ -30,6 +30,7 @@ body {
     max-width: 90vw;
 }
 
+/* MAIN DESIGN */
 img.design {
     max-width: 100%;
     max-height: 70vh;
@@ -41,7 +42,7 @@ img.design {
 a.button {
     display: inline-flex;
     align-items: center;
-    gap: 12px;
+    gap: 14px;
     padding: 14px 28px;
     background: #FF9900; /* Amazon orange */
     color: #111;
@@ -57,19 +58,27 @@ a.button:hover {
     box-shadow: 0 6px 16px rgba(0,0,0,0.35);
 }
 
-/* Amazon logo wrapper */
-.logo-wrap {
+/* AMAZON TEXT LOGO */
+.amazon-text {
+    font-size: 18px;
+    font-weight: bold;
     background: #fff;
-    padding: 4px 6px;
+    color: #111;
+    padding: 4px 10px;
     border-radius: 4px;
-    display: flex;
-    align-items: center;
+    position: relative;
+    line-height: 1;
 }
 
-.logo-wrap img {
-    width: 22px;
-    height: auto;
-    display: block;
+/* Amazon smile */
+.amazon-text::after {
+    content: "⌒";
+    position: absolute;
+    left: 50%;
+    bottom: -8px;
+    transform: translateX(-50%);
+    color: #FF9900;
+    font-size: 22px;
 }
 </style>
 </head>
@@ -78,14 +87,12 @@ a.button:hover {
 
 <div class="container">
 
-    <!-- MAIN DESIGN -->
+    <!-- DESIGN IMAGE -->
     <img class="design" src="F-CAW-F.png" alt="Design">
 
-    <!-- AMAZON BUTTON -->
+    <!-- AMAZON CTA -->
     <a class="button" href="YOUR_AMAZON_LINK_HERE" target="_blank">
-        <span class="logo-wrap">
-            <img src="amazon.png" alt="Amazon">
-        </span>
+        <span class="amazon-text">amazon</span>
         <span>Buy on Amazon</span>
     </a>
 
