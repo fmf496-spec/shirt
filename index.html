@@ -6,16 +6,12 @@
 <title>QR Reveal</title>
 
 <style>
-* {
+html, body {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-}
-
-html, body {
     width: 100%;
     height: 100%;
-    background: #000;
+    background: black;
     font-family: Arial, Helvetica, sans-serif;
 }
 
@@ -27,58 +23,23 @@ body {
 
 .container {
     text-align: center;
+}
+
+img {
     max-width: 90vw;
-}
-
-/* MAIN DESIGN */
-img.design {
-    max-width: 100%;
     max-height: 70vh;
-    display: block;
-    margin: 0 auto 30px;
+    margin-bottom: 30px;
 }
 
-/* AMAZON BUTTON */
-a.button {
-    display: inline-flex;
-    align-items: center;
-    gap: 14px;
+a {
+    display: inline-block;
     padding: 14px 28px;
-    background: #FF9900; /* Amazon orange */
+    background: #FF9900;
     color: #111;
     text-decoration: none;
-    font-size: 16px;
-    font-weight: bold;
-    border-radius: 6px;
-    transition: transform 0.15s ease, box-shadow 0.15s ease;
-}
-
-a.button:hover {
-    transform: translateY(-1px);
-    box-shadow: 0 6px 16px rgba(0,0,0,0.35);
-}
-
-/* AMAZON TEXT LOGO */
-.amazon-text {
     font-size: 18px;
     font-weight: bold;
-    background: #fff;
-    color: #111;
-    padding: 4px 10px;
-    border-radius: 4px;
-    position: relative;
-    line-height: 1;
-}
-
-/* Amazon smile */
-.amazon-text::after {
-    content: "⌒";
-    position: absolute;
-    left: 50%;
-    bottom: -8px;
-    transform: translateX(-50%);
-    color: #FF9900;
-    font-size: 22px;
+    border-radius: 6px;
 }
 </style>
 </head>
@@ -86,16 +47,11 @@ a.button:hover {
 <body>
 
 <div class="container">
-
-    <!-- DESIGN IMAGE -->
-    <img class="design" src="F-CAW-F.png" alt="Design">
-
-    <!-- AMAZON CTA -->
-    <a class="button" href="YOUR_AMAZON_LINK_HERE" target="_blank">
-        <span class="amazon-text">amazon</span>
-        <span>Buy on Amazon</span>
+    <img src="F-CAW-F.png" alt="Design">
+    <br>
+    <a href="https://www.amazon.com" target="_blank">
+        Buy on Amazon
     </a>
-
 </div>
 
 </body>
